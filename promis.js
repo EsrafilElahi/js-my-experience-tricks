@@ -7,7 +7,6 @@ useEffect(async () => {
 }, []);
 
 
-
 const useAllData = () => {
   const [sidebar, setSidebar] = useState();
   const [comments, setComments] = useState();
