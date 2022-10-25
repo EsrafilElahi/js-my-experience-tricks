@@ -17,7 +17,7 @@ const items = [
   }
 ];
 
-const reduced = HistoryFields.reduce((acc, val) => (
+const reduced = items.reduce((acc, val) => (
   {...acc, [val.id]: {name: val.name, college: false, id: val.id, major: ''}}
 ), {})
 
