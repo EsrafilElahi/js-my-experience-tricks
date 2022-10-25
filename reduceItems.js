@@ -22,3 +22,17 @@ const reduced = items.reduce((acc, val) => (
 ), {})
 
 console.log(reduced)
+
+
+const arr = ["one", "two", "two", "3", "one", "one", "3", "4", "two"];
+
+const arrFor = (arr) => {
+  const obj = {};
+  
+  arr.forEach(el => {
+    obj[el] ? obj[el] +=1 : obj[el] = 1;
+  })
+  
+  console.log(obj)
+  
+}
