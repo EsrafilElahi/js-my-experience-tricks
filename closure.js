@@ -26,3 +26,4 @@ closureObjInstance.log(); // 5
 
 const closureObjInstance2 = closureObject();
 closureObjInstance2.log(); // 42
+
