@@ -15,6 +15,9 @@ export function App() {
       <MemoizedFirst>
         <Second />
       </MemoizedFirst>
+
+      // <First /> with React.memo
+      // <Second /> with React.memo
     </div>
   )
 }
