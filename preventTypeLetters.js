@@ -1,30 +1,11 @@
-import React, { useState } from 'react';
+export const persianToEnglishDigits = (digit: number | string): string =>
+	String(digit)
+		.replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d).toString()) // Convert to string
+		.replace(/[۰-۹]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d).toString()); // Convert to string
 
-const YourComponent = () => {
-  const [inputValue, setInputValue] = useState('');
+export const preventNumbersTyping = (str: string): string => str.replace(/[0-9]/g, '');
+export const preventLettersTyping = (str: string): string => str.replace(/\D/g, '');
 
-  const handleInputChange = (event) => {
-    const value = event.target.value;
-
-    // Check if the entered value is a number
-    if (/^\d+$/.test(value)) {
-      setInputValue(value);
-    }
-  };
-
-  return (
-    <div>
-      <label>
-        Enter a number:
-        <input type="text" value={inputValue} onChange={handleInputChange} />
-      </label>
-    </div>
-  );
+export const setNumberDigitAndPreventLettersTypes = (value: string | number): string => {
+	return preventLettersTyping(persianToEnglishDigits(value));
 };
-
-export default YourComponent;
-
-
-const preventTypeLetter = (str) => {
-  return /^\d+$/.test(str)
-}
