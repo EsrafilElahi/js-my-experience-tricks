@@ -1,0 +1,25 @@
+const needle = 'ext';
+const haystack = 'nhistextforexternalvideotest';
+
+for(let i=0; i<haystack.length; i++){
+  for(let j=0; j<needle.length; j++) {  
+    console.log(`needle[j] : ${needle[j]}`);
+    console.log(`haystack[i+j] : ${haystack[i+j]}`);
+    
+    if (haystack[i+j] == needle[j]) {
+      console.log(`============== index : ${i} jndex : ${j} jndex : ${j+i} ==============`)
+    }
+    
+  }
+  
+}
+
+
+j-0 ---------------> needle[0]   = e
+i=1 -> 1+0 => 1 ---> haystack[1] = h
+
+j-1 ---------------> needle[1]   = x
+i=1 -> 1+1 => 2 ---> haystack[2] = i
+
+j-2 ---------------> needle[2]   = t
+i=1 -> 1+2 => 3 ---> haystack[3] = s
